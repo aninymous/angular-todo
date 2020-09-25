@@ -1,0 +1,21 @@
+.todo-wrapper {
+  width: 400px;  
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  padding: 5    px;  
+}
+
+.todo-item {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid lightblue;
+    cursor: pointer;
+
+}
+
+.todo-item:hover {
+    background-color: lightblue;
+}
