@@ -24,4 +24,4 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Running unit test coverage
 
-Run `ng testc` to run test coverage
+Run `npm run testc` to run test coverage
