@@ -16,7 +16,7 @@ describe('TodoService', () => {
   });
 
   describe('getTodos', () => {
-    fit('should return todo list with 2 items', (done: DoneFn) => {
+    it('should return todo list with 2 items', (done: DoneFn) => {
       service.getTodos().subscribe({
         next: (todos: Todo[]) => {
           expect(todos).toBeTruthy();

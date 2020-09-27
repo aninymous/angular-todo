@@ -15,6 +15,7 @@ export class TodoService {
         name: 'Call Plumber'
       }
     ];
+    console.log('Returning Todos');
     return of(todos);
   }
 
