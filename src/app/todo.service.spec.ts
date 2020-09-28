@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { TodoService } from './todo.service';
 import { Todo } from './todo-list/todo-list.model';
+import { TodoService } from './todo.service';
 
 
 describe('TodoService', () => {
@@ -25,5 +25,14 @@ describe('TodoService', () => {
         }
       });
     });
+
+    it('should add a todo to existing todo list', (done: DoneFn) => {
+      service.addTodo({ name: 'new todo' })
+        .subscribe(todo => {
+          expect(todo).toEqual({ id: '2', name: 'new todo' });
+          done();
+        });
+    });
+
   });
 });

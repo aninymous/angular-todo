@@ -36,7 +36,7 @@ describe('TodoListComponent', () => {
 
   it('should call getTodo Service on init', () => {
     // given
-    const mockTodos = [{ name: 'Todo 1' }];
+    const mockTodos = [{ id: '1', name: 'Todo 1' }];
     const mockService = new TodoService();
     const comp = new TodoListComponent(mockService);
     const mySpy = spyOn(mockService, 'getTodos').and.returnValue(of(mockTodos));

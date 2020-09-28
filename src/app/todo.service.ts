@@ -6,18 +6,31 @@ import { Todo } from './todo-list/todo-list.model';
   providedIn: 'root'
 })
 export class TodoService {
-  getTodos(): Observable<Todo[]> {
-    const todos = [
+
+  todos: Todo[];
+
+  constructor() {
+    this.todos = [
       {
+        id: '0',
         name: 'Pay Phone Bill'
       },
       {
+        id: '1',
         name: 'Call Plumber'
       }
     ];
-    console.log('Returning Todos');
-    return of(todos);
   }
 
-  constructor() { }
+  addTodo({ name }): Observable<Todo> {
+    this.todos = this.todos.concat({
+      id: `${this.todos.length}`,
+      name
+    });
+    return of(this.todos[this.todos.length - 1]);
+  }
+
+  getTodos(): Observable<Todo[]> {
+    return of(this.todos);
+  }
 }
